@@ -1,10 +1,10 @@
 package com.bank.entity;
 
-import org.antlr.v4.runtime.misc.NotNull;
-
-import jakarta.persistence.Column;
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
+import jakarta.persistence.ForeignKey;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -15,14 +15,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 public class AccountEntity {
 	@Id
-	private String useeId;
-	private String password;
-	@Column(nullable = false, unique = true)
-	private Integer AccountNo;
-	private Float Balance;
-	private String FirstName;
-	private String LastName;
-	private String Email;
-	private Integer MobileNo;
-	private String city;
+	private Integer accountNo;
+	private Integer balance;
 }
