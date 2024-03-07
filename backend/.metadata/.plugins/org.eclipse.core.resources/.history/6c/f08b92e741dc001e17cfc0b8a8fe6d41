@@ -1,0 +1,22 @@
+package com.bank.dto;
+
+import jakarta.persistence.Column;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
+public class AccountDTO {
+	
+	private String useeId;
+	private String password;
+	@Column(nullable = false, unique = true)
+	private Integer AccountNo;
+	private String FirstName;
+	private String LastName;
+	private String Email;
+	private Integer MobileNo;
+	private String city;
+}
