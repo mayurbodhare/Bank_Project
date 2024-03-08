@@ -15,4 +15,6 @@ public class UserDTO {
 	private String email;
 	private Integer mobileNo;
 	private String city;
+	private Integer transferAmount;
+	private Integer transferAccount;
 }

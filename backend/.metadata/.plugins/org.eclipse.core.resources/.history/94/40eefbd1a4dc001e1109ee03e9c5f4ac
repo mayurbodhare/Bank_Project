@@ -1,0 +1,15 @@
+spring : 
+      datasource:
+            url: jdbc:mysql://localhost:3306/mayur_pratiti
+            username: root
+            password: 12345
+            driver-class-name: com.mysql.cj.jdbc.Driver
+      jpa: 
+            show-sql: true
+            format-sql: true
+            hibernate: 
+                  ddl-auto: update         
+      application: 
+            name: User_Data
+            
+      port: 80

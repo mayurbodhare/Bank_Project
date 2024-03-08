@@ -17,6 +17,7 @@ public class CardEntity {
 	private Integer cardNo;
 	private Integer pin;
 	private Integer accountNo;
+	
 	@OneToOne
 	@PrimaryKeyJoinColumn
 	private AccountEntity accountEntity;

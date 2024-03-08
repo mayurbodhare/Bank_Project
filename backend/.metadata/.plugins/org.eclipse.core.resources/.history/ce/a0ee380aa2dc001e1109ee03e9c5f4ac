@@ -1,0 +1,27 @@
+package com.bank.services;
+
+import org.modelmapper.ModelMapper;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.bank.deo.UserDao;
+import com.bank.entity.UserEntity;
+import com.bank.vo.UserVO;
+
+@Service
+public class BankServices {
+	@Autowired
+	private UserDao userDao;
+	
+	@Autowired
+	private ModelMapper mapper;
+	
+	public UserVO loginUser(String accountNo, String password) {
+		UserVO userVO = new UserVO(null, "waiting to login", 0);
+		
+		UserEntity userEntity = userDao.getUser(accountNo);
+		
+		return userVO;
+	}
+	
+}

@@ -1,0 +1,5 @@
+package com.bank.vo;
+
+public class UserVO {
+
+}

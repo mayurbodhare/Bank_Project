@@ -1,0 +1,27 @@
+package com.bank.deo;
+
+import java.util.Optional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
+
+import com.bank.entity.UserEntity;
+import com.bank.repository.UserRepository;
+
+import jakarta.transaction.Transactional;
+
+
+@Repository
+@Transactional
+public class UserDao {
+	
+	@Autowired
+	UserRepository userRepository;
+
+	public UserEntity getUser(Integer accountNo) {
+		Optional<UserEntity> optional = userRepository.findById(accountNo);
+		UserEntity userEntity = optional.get();
+		return userEntity;
+	}
+
+}

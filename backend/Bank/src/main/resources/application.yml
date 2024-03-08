@@ -11,3 +11,6 @@ spring :
                   ddl-auto: update         
       application: 
             name: User_Data
+            
+server:
+      port: 80

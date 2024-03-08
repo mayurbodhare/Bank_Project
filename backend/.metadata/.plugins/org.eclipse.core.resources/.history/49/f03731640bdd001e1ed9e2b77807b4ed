@@ -1,0 +1,12 @@
+package com.bank.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.bank.entity.UserEntity;
+import java.util.List;
+
+
+public interface UserRepository extends JpaRepository<UserEntity, Integer>{
+	
+	List<UserEntity> findByAccountNo(Integer accountNo);No(Integer accountNo);
+}
